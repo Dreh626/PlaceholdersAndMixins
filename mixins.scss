@@ -1,0 +1,51 @@
+@import './placeholders.scss';
+
+$layout-module-size: 30px;
+$directions: top,
+right,
+bottom,
+left;
+
+@each $direction in $directions {
+
+  // Para cada valor na variavel direction é criado um placeholder para zerar o padding
+  %u-no-padding-#{$direction} {
+    padding-#{$direction}: 0;
+  }
+
+  // Aplica meio módulo de padding em todas as direções
+  %u-half-padding-#{$direction} {
+    padding-#{$direction}: $layout-module-size /2;
+  }
+
+  // Aplica o valor cheio do módulo de padding em todas as direções
+  %u-default-padding-#{$direction} {
+    padding-#{$direction}: $layout-module-size
+  }
+
+  // Aplica o dobro do valor do módulo de padding em todas as direções
+  %u-double-padding-#{$direction} {
+    padding-#{$direction}: $layout-module-size *2;
+  }
+
+
+  // Para cada valor na variavel direction é criado um placeholder para zerar a margin
+  %u-no-margin-#{$direction} {
+    margin-#{$direction}: 0;
+  }
+
+  // Aplica meio módulo de margin em todas as direções
+  %u-half-margin-#{$direction} {
+    margin-#{$direction}: $layout-module-size /2;
+  }
+
+  // Aplica o valor cheio do módulo de margin em todas as direções
+  %u-default-margin-#{$direction} {
+    margin-#{$direction}: $layout-module-size
+  }
+
+  // Aplica o dobro do valor do módulo de margin em todas as direções
+  %u-double-margin-#{$direction} {
+    margin-#{$direction}: $layout-module-size *2;
+  }
+}
